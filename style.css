@@ -1,0 +1,133 @@
+@media all {
+    body {
+        background-color: white;
+        margin: 0px;
+    }
+
+    p, a, h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.4em;
+    }
+    p, a {
+        font-size: 1em;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+        color: dodgerblue;
+        text-decoration: none;
+    }
+
+    body {
+        background-color: ghostwhite;
+    }
+
+    body div div {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    body div.content div {
+        background-color: gainsboro;
+        background: linear-gradient(to right, gainsboro,lightgray);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 3px;
+    }
+
+    hr {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-style: dotted none none none;
+        border-width: 1px;
+        border-color: silver;
+    }
+
+    img {
+        border-style: none;
+    }
+
+    table.album tr td {
+        text-align: center;
+    }
+
+    table.album tr td img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.referencelist ul, div.navigation ul {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    div.referencelist li, div.navigation li {
+        display: inline;
+    }
+
+    div.referencelist a, div.navigation a {
+        display: inline;
+        display: inline-block;
+    }
+
+    div.navigation, div.navigation div div {
+        background: none;
+        padding: 0px;
+    }
+
+    div.navigation a {
+        font-variant: small-caps;
+        font-weight: bold;
+        color: black;
+        padding: 10px;
+        border-bottom: solid 2px darkslategray;
+    }
+
+    div.navigation a:hover, div.referencelist a:hover {
+        border-bottom-color: darkturquoise;
+    }
+
+    div.referencelist a:hover {
+        border-color: darkturquoise;
+    }
+
+    div.navigation a img {
+        width: 24px;
+        height: 16px;
+    }
+
+    div.referencelist a {
+        background-color: cadetblue;
+        color: white;
+        padding: 10px;
+        border: solid 2px dimgray;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+
+    table.album, table.album tbody, table.album tr, table.album tr > td {
+        width: 100%;
+        display: block;
+    }
+
+    div.navigation li, div.navigation a, div.referencelist li, div.referencelist a {
+        display: block;
+    }
+
+}
+@media print {
+
+    div.navigation {
+        display: none;
+    }
+
+}

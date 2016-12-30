@@ -1,0 +1,16 @@
+body div.content div {
+    background-color: gainsboro;
+}
+
+body div div {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body table  {
+    width: 920px;
+}
+
+table.album tr td img {
+    width: auto;
+}
