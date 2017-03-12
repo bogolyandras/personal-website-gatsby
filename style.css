@@ -1,7 +1,16 @@
 @media all {
     body {
-        background-color: white;
+        /*background-color: white;*/
+        background-color:#a5c4dc;
         margin: 0px;
+    }
+
+    table {
+        border-spacing: 0px;
+    }
+
+    img {
+        border-style: none;
     }
 
     p, a, h1, h2, h3, h4, h5, h6 {
@@ -21,7 +30,7 @@
         text-decoration: none;
     }
 
-    body div {
+    body div.container {
         max-width: 1300px;
         margin-left: auto;
         margin-right: auto;
@@ -30,25 +39,55 @@
         padding: 0px 12px 0px 12px;
     }
 
-    div.content {
-        background-color: gainsboro;
-        background: linear-gradient(to right, gainsboro,lightgray);
+    div.title-skeleton {
+        background-color: #325c80;
+        background: linear-gradient(to right, #325c80,#2f506d);
+    }
+
+    div.album-skeleton {
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    div.title {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        color: white;
+        
+    }
+
+    div.title h1 {
+        font-size: 3em; 
+        font-weight: 400;
+    }
+
+    div.title p {
+        font-weight: 100;
+    }
+
+    div.referencelist {
+        background-color:#a5c4dc;
+        color: white;
         padding-top: 5px;
-        padding-bottom: 5px;
-        border-radius: 3px;
+        padding-bottom: 20px;
     }
 
-    hr {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-style: dotted none none none;
-        border-width: 1px;
-        border-color: silver;
+    table.album {
+        border-spacing: 2px;
     }
 
-    img {
-        border-style: none;
+    table.album tr td {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
     }
+
+    table.album tr td a {
+         display: block;
+         line-height: 0;
+    }
+
 
     table.album tr td {
         text-align: center;
@@ -59,17 +98,21 @@
         height: auto;
     }
 
-    div.referencelist ul, div.navigation ul {
+    div.navigation {
+        background-color: white;
+    }
+
+    div.navigation ul {
         display: block;
         padding: 0px;
         margin: 0px;
     }
 
-    div.referencelist li, div.navigation li {
+    div.navigation li {
         display: inline;
     }
 
-    div.referencelist a, div.navigation a {
+    div.navigation a {
         display: inline;
         display: inline-block;
     }
@@ -87,11 +130,6 @@
         text-align: right;
     }
 
-    div.navigation, div.navigation {
-        background: none;
-        padding: 0px;
-    }
-
     div.navigation a {
         font-variant: small-caps;
         font-weight: bold;
@@ -100,19 +138,8 @@
         border-bottom: solid 3px darkslategray;
     }
 
-    div.navigation a:hover, div.referencelist a:hover {
+    div.navigation a:hover {
         border-bottom-color: darkturquoise;
-    }
-
-    div.referencelist a:hover {
-        border-color: darkturquoise;
-    }
-
-    div.referencelist a {
-        background-color: cadetblue;
-        color: white;
-        padding: 10px;
-        border: solid 2px dimgray;
     }
 
 }
@@ -127,8 +154,12 @@
         text-align: left;
     }
 
-    div.navigation li, div.navigation a, div.referencelist li, div.referencelist a {
+    div.navigation li, div.navigation a {
         display: block;
+    }
+
+    table.album tr td img {
+        padding: 2px;
     }
 
 }

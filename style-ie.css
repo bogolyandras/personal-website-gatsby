@@ -1,5 +1,9 @@
-body div.content {
-    background-color: gainsboro;
+body {
+    background-color: white;
+}
+
+div.title-skeleton {
+    background-color: #325c80;
 }
 
 body div {
