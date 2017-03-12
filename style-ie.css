@@ -1,16 +1,12 @@
-body div.content div {
+body div.content {
     background-color: gainsboro;
 }
 
-body div div {
+body div {
     margin-left: 0px;
     margin-right: 0px;
 }
 
 body table  {
     width: 920px;
-}
-
-table.album tr td img {
-    width: auto;
 }

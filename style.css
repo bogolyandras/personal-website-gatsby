@@ -21,20 +21,16 @@
         text-decoration: none;
     }
 
-    body {
-        background-color: ghostwhite;
-    }
-
-    body div div {
+    body div {
         max-width: 1300px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 12px 0px 12px;
     }
 
-    body div.content div {
+    div.content {
         background-color: gainsboro;
         background: linear-gradient(to right, gainsboro,lightgray);
         padding-top: 5px;
@@ -78,7 +74,20 @@
         display: inline-block;
     }
 
-    div.navigation, div.navigation div div {
+    table.collapse {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .navigation-left {
+        text-align: left;
+    }
+
+    .navigation-right {
+        text-align: right;
+    }
+
+    div.navigation, div.navigation {
         background: none;
         padding: 0px;
     }
@@ -88,7 +97,7 @@
         font-weight: bold;
         color: black;
         padding: 10px;
-        border-bottom: solid 2px darkslategray;
+        border-bottom: solid 3px darkslategray;
     }
 
     div.navigation a:hover, div.referencelist a:hover {
@@ -97,11 +106,6 @@
 
     div.referencelist a:hover {
         border-color: darkturquoise;
-    }
-
-    div.navigation a img {
-        width: 24px;
-        height: 16px;
     }
 
     div.referencelist a {
@@ -114,9 +118,13 @@
 }
 @media only screen and (max-width: 700px) {
 
-    table.album, table.album tbody, table.album tr, table.album tr > td {
+    table.collapse, table.collapse tbody, table.collapse tr, table.collapse tr > td {
         width: 100%;
         display: block;
+    }
+
+    .navigation-right {
+        text-align: left;
     }
 
     div.navigation li, div.navigation a, div.referencelist li, div.referencelist a {
