@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website at bogolyandras.com",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogolyandras/PersonalWebsite.git"
+  },
+  "keywords": [],
+  "author": "Andras Bogoly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogolyandras/PersonalWebsite/issues"
+  },
+  "homepage": "https://bogolyandras.com/",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
