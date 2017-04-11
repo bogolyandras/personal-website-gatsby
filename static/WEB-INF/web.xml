@@ -12,7 +12,6 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
-    <!--
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>HTTPSOnly</web-resource-name>
@@ -22,7 +21,6 @@
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    -->
 
     <error-page>
         <error-code>403</error-code>
