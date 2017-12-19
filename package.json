@@ -1,31 +1,25 @@
 {
-  "name": "personal-website",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
   "version": "1.0.0",
-  "description": "Personal website at bogolyandras.com",
-  "main": "app/index.js",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.141",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-react-helmet": "^1.0.8"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
-    "build": "webpack --optimize-minimize --define process.env.NODE_ENV=\"'production'\"",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bogolyandras/PersonalWebsite.git"
-  },
-  "keywords": [],
-  "author": "Andras Bogoly",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bogolyandras/PersonalWebsite/issues"
-  },
-  "homepage": "https://bogolyandras.com/",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.27.3",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.28.0",
-    "webpack": "^2.2.1"
-  },
-  "dependencies": {
-    "jquery": "^3.1.1"
+    "prettier": "^1.9.2"
   }
 }
