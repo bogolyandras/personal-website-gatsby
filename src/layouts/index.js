@@ -9,6 +9,7 @@ const Header = () => (
   <div className={'navigation'}>
       <div className={'container'}>
           <table className={'collapse'}>
+            <tbody>
               <tr>
                   <td className={'navigation-left'}>
                       <ul>
@@ -16,6 +17,7 @@ const Header = () => (
                       </ul>
                   </td>
               </tr>
+            </tbody>
           </table>
       </div>
   </div>
