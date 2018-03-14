@@ -1,6 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+const websites = {
+  "asdasd": {
+    "asdasd": "asdasdasd",
+    "dasd": "asdasdasdas"
+  },
+  "dasdas": {
+    "fdfsdf": "fsdfsdfsdf",
+    "fsdfsdf": "sdfsdfsdfsdfsdf"
+  },
+  "dasdas": {
+    "fdfsdf": "fsdfsdfsdf",
+    "fsdfsdf": "sdfsdfsdfsdfsdf",
+    "fsdfsdsadf": "sdfsdfsdfsdfsdf",
+    "fsddasduhfsdf": "sdfsdfsdfsdfsdf"
+  }
+}
+
 const SecondPage = () => (
   <div className={'album-skeleton'}>
     <div className={'container'}>
