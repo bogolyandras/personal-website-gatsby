@@ -35,7 +35,7 @@ jobs:
         
       # run build
       - run: yarn build
-      - run: tar -czvf public.tar.gz --directory=~/repo/public files
+      - run: tar -czf public.tar.gz --directory=~/repo/public .
       
       - store_artifacts:
           path: ~/repo/public.tar.gz
