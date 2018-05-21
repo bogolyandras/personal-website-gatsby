@@ -30,8 +30,8 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'András Bögöly Personal homepage' },
         { name: 'keywords', content: 'sample, something' },
-        { name: 'theme-color', content: 'darkslategray' },
-        { name: 'msapplication-TileColor', content: 'darkslategray' },
+        { name: 'theme-color', content: '#325c80' },
+        { name: 'msapplication-TileColor', content: '#325c80' },
         { name: 'msapplication-TileImage', content: '/icon/ms-icon.png' }
       ]}
       link={[
