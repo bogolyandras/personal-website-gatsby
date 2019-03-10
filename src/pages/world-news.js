@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
 import './world-news.css'
+import Layout from '../components/layout';
 
 var i = 0;
 const sections = [
@@ -142,44 +143,45 @@ const sections = [
 ];
 
 const List = () => (
-
-  <div className={"album-skeleton"}>
-    <div className={"container"}>
-      <table className={"collapse"}>
-        <tbody>
-          <tr>
-            {
-              sections.map(
-                (section) =>
-                  <td key={"l" + i++}>
-                    <ul className={"section"}>
-                      {
-                        section.map(
-                          (category) =>
-                            <li key={"l" + i++}>
-                              <h1>{category.name}</h1>
-                              <ul className={"weblink"}>
-                                {
-                                  category.websites.map(
-                                    (website) =>
-                                      <li key={"l" + i++}>
-                                        <a href={website.url}>{website.name}</a>
-                                      </li>
-                                  )
-                                }
-                              </ul>
-                            </li>
-                        )
-                      }
-                    </ul>
-                  </td>
-              )
-            }
-          </tr>
-        </tbody>
-      </table>
+  <Layout>
+    <div className={"album-skeleton"}>
+      <div className={"container"}>
+        <table className={"collapse"}>
+          <tbody>
+            <tr>
+              {
+                sections.map(
+                  (section) =>
+                    <td key={"l" + i++}>
+                      <ul className={"section"}>
+                        {
+                          section.map(
+                            (category) =>
+                              <li key={"l" + i++}>
+                                <h1>{category.name}</h1>
+                                <ul className={"weblink"}>
+                                  {
+                                    category.websites.map(
+                                      (website) =>
+                                        <li key={"l" + i++}>
+                                          <a href={website.url}>{website.name}</a>
+                                        </li>
+                                    )
+                                  }
+                                </ul>
+                              </li>
+                          )
+                        }
+                      </ul>
+                    </td>
+                )
+              }
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
+  </Layout>
 )
 
 export default List

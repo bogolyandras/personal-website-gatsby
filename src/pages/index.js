@@ -1,5 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+
+// import React from "react"
+// import { Link } from "gatsby"
+
+// import Layout from "../components/layout"
+// import Image from "../components/image"
+// import SEO from "../components/seo"
+
+// const IndexPage = () => (
+//   <Layout>
+//     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+//     <h1>Hi people</h1>
+//     <p>Welcome to your new Gatsby site.</p>
+//     <p>Now go build something great.</p>
+//     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+//       <Image />
+//     </div>
+//     <Link to="/page-2/">Go to page 2</Link>
+//   </Layout>
+// )
+
+// export default IndexPage
+
+
+import React from "react"
+import Layout from "../components/layout"
+import { Link } from "gatsby"
 
 import p1 from '../image/flickr/14361853906_9df07f909f_n.jpg'
 import p2 from '../image/flickr/13543664355_f01064fa4a_n.jpg'
@@ -13,6 +38,7 @@ import instagram from '../image/logos/instagram.png'
 import linkedin from '../image/logos/linkedin.png'
 
 const IndexPage = () => (
+  <Layout>
     <div>
         <div className={'title-skeleton'}>
             <div className={'container'}>
@@ -65,6 +91,7 @@ const IndexPage = () => (
             </div>
         </div>
     </div>
+  </Layout>
 );
 
 export default IndexPage
