@@ -1,7 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import Link from 'gatsby-link'
-
 import './world-news.css'
 import Layout from '../components/layout';
 
