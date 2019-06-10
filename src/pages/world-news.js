@@ -1,8 +1,10 @@
-import React from 'react'
-import './world-news.css'
-import Layout from '../components/layout';
+import React from "react"
+import Layout from "../components/layout"
+import Container from "../components/container"
+import PropTypes from "prop-types"
 
-var i = 0;
+import styles from "./world-news.module.css"
+
 const sections = [
   [
     {
@@ -139,46 +141,73 @@ const sections = [
   ]
 ];
 
-const List = () => (
-  <Layout>
-    <div className={"album-skeleton"}>
-      <div className={"container"}>
-        <table className={"collapse"}>
-          <tbody>
-            <tr>
-              {
-                sections.map(
-                  (section) =>
-                    <td key={"l" + i++}>
-                      <ul className={"section"}>
-                        {
-                          section.map(
-                            (category) =>
-                              <li key={"l" + i++}>
-                                <h1>{category.name}</h1>
-                                <ul className={"weblink"}>
-                                  {
-                                    category.websites.map(
-                                      (website) =>
-                                        <li key={"l" + i++}>
-                                          <a href={website.url}>{website.name}</a>
-                                        </li>
-                                    )
-                                  }
-                                </ul>
-                              </li>
-                          )
-                        }
-                      </ul>
-                    </td>
-                )
-              }
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </Layout>
+/**
+ * A section is rather an invisible divider.
+ * On a normal desktop screen (>700px) we typically have 3 vertically divided sections.
+ * On a mobile view, it will collapse and the sections will be one by one followed by each other, practically invisible.
+ * @param {*} props 
+ */
+const Section = (props) => (
+  <ul style={{listStyle: "none", padding: 0, margin: 0}}>
+    {
+      props.subSections.map((subSectionData) => <li><SubSection name={subSectionData.name} websites={subSectionData.websites} /></li>)
+    }
+  </ul>
 )
 
-export default List
+/**
+ * A section accepts an array of subsections.
+ * A section does not have a name or anything in itself. It only has purpose to hold contents together.
+ */
+Section.propTypes = {
+  subSections: PropTypes.array.isRequired
+}
+
+/**
+ * A subsection typically represents a country with multiple websites / news agencies.
+ * @param {*} props 
+ */
+const SubSection = (props) => (
+  <div>
+    <h1 style={{margin: 2}}>{props.name}</h1>
+    <ul style={{listStyle: "none", padding: "0px 10px 10px 10px"}}>
+      {
+        props.websites.map((website) => <li style={{padding: "0.5rem", borderBottom: "black dotted 1px"}}><Link name={website.name} url={website.url} /></li>)
+      }
+    </ul>
+  </div>
+  
+)
+
+/**
+ * A name of the country or organization and the related websites are required.
+ */
+SubSection.propTypes = {
+  name: PropTypes.string.isRequired,
+  websites: PropTypes.array.isRequired
+}
+
+const Link = (props) => (
+  <a href={props.url}>{props.name}</a>
+)
+
+Link.protoTypes = {
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+}
+
+export default () => (
+  <Layout canonicalLink="/world-news/" title="World news">
+    <Container style={{backgroundColor: "white", paddingTop: 10}}>
+      <table style={{width: "100%", tableLayout: "fixed"}} className={styles.collapse}>
+        <tbody style={{verticalAlign: "top"}}>
+          <tr>
+            {
+              sections.map((sectionData) => <td><Section subSections={sectionData} /></td>)
+            }
+          </tr>
+        </tbody>
+      </table>
+    </Container>
+  </Layout>
+)

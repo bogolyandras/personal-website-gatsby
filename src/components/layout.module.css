@@ -1,0 +1,31 @@
+
+.collapse {
+    display: inline;
+}
+
+.navigation a {
+    display: inline-block;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    border-bottom: solid 3px darkslategray;
+    margin: 1px;
+}
+  
+.navigation a:hover {
+    border-bottom-color: darkturquoise;
+}
+
+@media screen and (max-width: 700px) {
+
+    .collapse {
+        width: 100%;
+        display: block;
+    }
+
+    .navigation a {
+        display: block;
+    }
+  
+}
