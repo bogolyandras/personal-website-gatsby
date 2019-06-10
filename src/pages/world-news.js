@@ -99,13 +99,26 @@ const sections = [
       ]
     },
     {
+      "name": "Saudi Arabia",
+      "websites": [
+        { "name": "Arab news", "url": "http://www.arabnews.com/" }
+      ]
+    },
+    {
       "name": "India",
       "websites": [
         { "name": "India Times", "url": "http://www.indiatimes.com/" },
         { "name": "Hindustan Times", "url": "http://www.hindustantimes.com/" },
         { "name": "The Hindu", "url": "http://www.thehindu.com/" }
       ]
+    },
+    {
+      "name": "Israel",
+      "websites": [
+        { name: "The Jerusalem Post", "url": "https://www.jpost.com/" }
+      ]
     }
+
   ],
   [
     {
@@ -141,6 +154,8 @@ const sections = [
   ]
 ];
 
+var i = 0;
+
 /**
  * A section is rather an invisible divider.
  * On a normal desktop screen (>700px) we typically have 3 vertically divided sections.
@@ -150,7 +165,7 @@ const sections = [
 const Section = (props) => (
   <ul style={{listStyle: "none", padding: 0, margin: 0}}>
     {
-      props.subSections.map((subSectionData) => <li><SubSection name={subSectionData.name} websites={subSectionData.websites} /></li>)
+      props.subSections.map((subSectionData) => <li key={i++}><SubSection name={subSectionData.name} websites={subSectionData.websites} /></li>)
     }
   </ul>
 )
@@ -172,7 +187,7 @@ const SubSection = (props) => (
     <h1 style={{margin: 2}}>{props.name}</h1>
     <ul style={{listStyle: "none", padding: "0px 10px 10px 10px"}}>
       {
-        props.websites.map((website) => <li style={{padding: "0.5rem", borderBottom: "black dotted 1px"}}><Link name={website.name} url={website.url} /></li>)
+        props.websites.map((website) => <li style={{padding: "0.5rem", borderBottom: "black dotted 1px"}} key={i++}><Link name={website.name} url={website.url} key={i++} /></li>)
       }
     </ul>
   </div>
@@ -203,7 +218,7 @@ export default () => (
         <tbody style={{verticalAlign: "top"}}>
           <tr>
             {
-              sections.map((sectionData) => <td><Section subSections={sectionData} /></td>)
+              sections.map((sectionData) => <td key={i++}><Section subSections={sectionData} /></td>)
             }
           </tr>
         </tbody>
