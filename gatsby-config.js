@@ -1,4 +1,3 @@
-
 /**
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
@@ -22,6 +21,6 @@ module.exports = {
         display: "browser", // https://developers.google.com/web/fundamentals/web-app-manifest/#display
         icon: "src/images/icon.png", // This path is relative to the root of the site.
       },
-    }
-  ]
+    },
+  ],
 }
