@@ -1,5 +1,4 @@
 import React from "react"
-import Helmet from "react-helmet"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
 import styles from "./layout.module.css"
@@ -42,14 +41,6 @@ const menuItems = [
 
 export default props => (
   <div>
-    <Helmet>
-      <meta charSet="utf-8"/>
-      <meta name="description" content="András Bögöly Personal homepage"/>
-      <title>{(props.title) ? "András Bögöly - " + props.title : "András Bögöly - Personal homepage"}</title>
-      {props.canonicalLink &&
-      <link rel="canonical" href={"https://bogolyandras.com" + props.canonicalLink}/>
-      }
-    </Helmet>
     <Container style={{ backgroundColor: "white" }}>
       <Menu canonicalLink={props.canonicalLink} menuItems={menuItems} />
     </Container>

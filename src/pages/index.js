@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
+import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
 import p1 from "../images/flickr/14361853906_9df07f909f_n.jpg"
@@ -35,6 +36,7 @@ AlbumImage.propTypes = {
 
 export default () => (
   <Layout canonicalLink="/">
+    <SEO title="Home" />
     <Container style={{ paddingTop: 7, paddingBottom: 15, color: "white", backgroundColor: "#325c80" }}>
       <h1 style={{ fontSize: "3em", fontWeight: 400 }}>Welcome to my world!</h1>
       <p style={{ fontWeight: 100 }}>Here you will find some interesting stuff! Although there are not too many things,

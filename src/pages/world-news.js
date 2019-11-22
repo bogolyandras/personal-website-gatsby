@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import PropTypes from "prop-types"
+import SEO from "../components/seo"
 
 import styles from "./world-news.module.css"
 
@@ -226,7 +227,8 @@ Link.protoTypes = {
 }
 
 export default () => (
-  <Layout canonicalLink="/world-news/" title="World news">
+  <Layout canonicalLink="/world-news/">
+    <SEO title="World news" />
     <Container style={{ backgroundColor: "white", paddingTop: 10 }}>
       <table style={{ width: "100%", tableLayout: "fixed" }} className={styles.collapse}>
         <tbody style={{ verticalAlign: "top" }}>
