@@ -150,6 +150,7 @@ const sections = [
         { "name": "Xinhua", "url": "http://www.news.cn/english/" },
         { "name": "People Daily", "url": "http://en.people.cn" },
         { "name": "China Daily", "url": "http://www.chinadaily.com.cn/" },
+        { "name": "Caixin", "url": "https://www.caixinglobal.com/" },
       ],
     },
     {
@@ -167,7 +168,7 @@ const sections = [
   ],
 ]
 
-var i = 0
+let i = 0
 
 /**
  * A section is rather an invisible divider.
