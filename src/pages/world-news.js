@@ -15,8 +15,8 @@ const sections = [
         { "name": "British Broadcasting Corporation", "url": "http://www.bbc.com" },
         { "name": "The Telegraph", "url": "https://www.telegraph.co.uk" },
         { "name": "Financial Times", "url": "https://www.ft.com/" },
-        { "name": "The Independent", "url": "http://www.independent.co.uk/" },
-      ],
+        { "name": "The Independent", "url": "http://www.independent.co.uk/" }
+      ]
     },
     {
       "name": "United States",
@@ -39,34 +39,34 @@ const sections = [
         { "name": "U.S. News", "url": "https://www.usnews.com/" },
         { "name": "CBS News", "url": "http://www.cbsnews.com/" },
         { "name": "Houston Chronicle", "url": "http://www.chron.com/" },
-        { "name": "SFGate", "url": "http://www.sfgate.com/" },
-      ],
+        { "name": "SFGate", "url": "http://www.sfgate.com/" }
+      ]
     },
     {
       "name": "Australia",
       "websites": [
         { "name": "ABC News", "url": "http://abcnews.go.com/" },
-        { "name": "news.com.au", "url": "http://www.news.com.au/" },
-      ],
+        { "name": "news.com.au", "url": "http://www.news.com.au/" }
+      ]
     },
     {
       "name": "Canada",
       "websites": [
-        { "name": "Canadian Broadcasting Corporation", "url": "http://www.cbc.ca/" },
-      ],
+        { "name": "Canadian Broadcasting Corporation", "url": "http://www.cbc.ca/" }
+      ]
     },
     {
       "name": "France",
       "websites": [
-        { "name": "Agence France Presse", "url": "https://www.afp.com/en" },
-      ],
+        { "name": "Agence France Presse", "url": "https://www.afp.com/en" }
+      ]
     },
     {
       "name": "Germany",
       "websites": [
-        { "name": "Deutsche Welle", "url": "http://www.dw.com" },
-      ],
-    },
+        { "name": "Deutsche Welle", "url": "http://www.dw.com" }
+      ]
+    }
   ],
   [
     {
@@ -75,8 +75,8 @@ const sections = [
         { "name": "Nikkei Asian Review", "url": "https://asia.nikkei.com/" },
         { "name": "The Asahi Shimbun", "url": "http://www.asahi.com/ajw/" },
         { "name": "Yomiuri Shimbun", "url": "http://the-japan-news.com/" },
-        { "name": "NHK World", "url": "https://www3.nhk.or.jp/nhkworld/" },
-      ],
+        { "name": "NHK World", "url": "https://www3.nhk.or.jp/nhkworld/" }
+      ]
     },
     {
       "name": "South Korea",
@@ -84,53 +84,54 @@ const sections = [
         { "name": "The Chosun Ilbo", "url": "http://english.chosun.com/" },
         { "name": "Korea Joongang Daily", "url": "http://koreajoongangdaily.joins.com/" },
         { "name": "The Hankyoreh", "url": "http://english.hani.co.kr/" },
-        { "name": "Daily NK", "url": "http://english.dailynk.com/english/" },
-      ],
+        { "name": "Daily NK", "url": "http://english.dailynk.com/english/" }
+      ]
     },
     {
       "name": "Singapore",
       "websites": [
-        { "name": "Straits Times", "url": "http://www.straitstimes.com" },
-      ],
+        { "name": "Straits Times", "url": "http://www.straitstimes.com" }
+      ]
     },
     {
       "name": "Hong Kong",
       "websites": [
-        { "name": "South China Morning Post", "url": "https://www.scmp.com/" },
-      ],
+        { "name": "South China Morning Post", "url": "https://www.scmp.com/" }
+      ]
     },
     {
       "name": "Taiwan",
       "websites": [
-        { "name": "Taipei Times", "url": "http://www.taipeitimes.com/" },
-      ],
+        { "name": "Taipei Times", "url": "http://www.taipeitimes.com/" }
+      ]
     },
     {
       "name": "Qatar",
       "websites": [
-        { "name": "Al Jazeera", "url": "http://www.aljazeera.com" },
-      ],
+        { "name": "Al Jazeera", "url": "http://www.aljazeera.com" }
+      ]
     },
     {
       "name": "Saudi Arabia",
       "websites": [
-        { "name": "Arab news", "url": "http://www.arabnews.com/" },
-      ],
+        { "name": "Arab news", "url": "http://www.arabnews.com/" }
+      ]
     },
     {
       "name": "India",
       "websites": [
+        { "name": "TFIPost", "url": "https://tfipost.com/" },
         { "name": "India Times", "url": "http://www.indiatimes.com/" },
         { "name": "Hindustan Times", "url": "http://www.hindustantimes.com/" },
-        { "name": "The Hindu", "url": "http://www.thehindu.com/" },
-      ],
+        { "name": "The Hindu", "url": "http://www.thehindu.com/" }
+      ]
     },
     {
       "name": "Israel",
       "websites": [
-        { name: "The Jerusalem Post", "url": "https://www.jpost.com/" },
-      ],
-    },
+        { "name": "The Jerusalem Post", "url": "https://www.jpost.com/" }
+      ]
+    }
 
   ],
   [
@@ -140,8 +141,8 @@ const sections = [
         { "name": "Russia Today", "url": "https://www.rt.com" },
         { "name": "Pravda", "url": "http://www.pravdareport.com/" },
         { "name": "Sputnik News", "url": "https://sputniknews.com/" },
-        { "name": "Itar Tass", "url": "http://tass.com/" },
-      ],
+        { "name": "Itar Tass", "url": "http://tass.com/" }
+      ]
     },
     {
       "name": "China",
@@ -150,22 +151,22 @@ const sections = [
         { "name": "Xinhua", "url": "http://www.news.cn/english/" },
         { "name": "People Daily", "url": "http://en.people.cn" },
         { "name": "China Daily", "url": "http://www.chinadaily.com.cn/" },
-        { "name": "Caixin", "url": "https://www.caixinglobal.com/" },
-      ],
+        { "name": "Caixin", "url": "https://www.caixinglobal.com/" }
+      ]
     },
     {
       "name": "Turkey",
       "websites": [
-        { "name": "Anadolu Agency", "url": "https://aa.com.tr/en" },
-      ],
+        { "name": "Anadolu Agency", "url": "https://aa.com.tr/en" }
+      ]
     },
     {
       "name": "North Korea",
       "websites": [
-        { "name": "Rodong Sinmun", "url": "http://rodong.rep.kp/en/" },
-      ],
-    },
-  ],
+        { "name": "Rodong Sinmun", "url": "http://rodong.rep.kp/en/" }
+      ]
+    }
+  ]
 ]
 
 let i = 0
