@@ -36,7 +36,7 @@ MenuItem.propTypes = {
 const menuItems = [
   { "name": "Home", "to": "/" },
   { "name": "Blog", "to": "/blog/" },
-  { "name": "World news", "to": "/world-news/" }
+  { "name": "World News", "to": "/world-news/" }
 ]
 
 export default props => (

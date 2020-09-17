@@ -49,9 +49,9 @@ export default () => (
           <AlbumImage src={p1} href={"https://www.flickr.com/photos/bogolyandras/14361853906"} title={"Sleeping Kitten"}
                       width={320} height={180}/>
           <AlbumImage src={p2} href={"https://www.flickr.com/photos/bogolyandras/13543664355"}
-                      title={"Aranyfa by András Bögöly, on Flickr"} width={320} height={180}/>
+                      title={"Aranyfa"} width={320} height={180}/>
           <AlbumImage src={p3} href={"https://www.flickr.com/photos/bogolyandras/13454067423"}
-                      title={"Waterfall by András Bögöly, on Flickr"} width={320} height={180}/>
+                      title={"Waterfall"} width={320} height={180}/>
         </tr>
         <tr>
           <AlbumImage src={p4} href={"https://www.flickr.com/photos/bogolyandras/13842086385"} title={"Salad"}
@@ -59,7 +59,7 @@ export default () => (
           <AlbumImage src={p5} href={"https://www.flickr.com/photos/bogolyandras/14592209397"}
                       title={"Niederösterreich"} width={320} height={240}/>
           <AlbumImage src={p6} href={"https://www.flickr.com/photos/bogolyandras/13364086264"}
-                      title={"Wagrain Mountains by András Bögöly, on Flickr"} width={320} height={240}/>
+                      title={"Wagrain Mountains"} width={320} height={240}/>
         </tr>
         </tbody>
       </table>
