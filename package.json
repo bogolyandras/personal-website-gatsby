@@ -20,7 +20,6 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "npm-check": "^5.9.2",
     "prettier": "^2.5.1"
   },
   "keywords": [
