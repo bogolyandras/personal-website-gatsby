@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "personal-website-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Andras Bogoly personal webpage",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andras Bogoly <andras.bogoly.91@gmail.com>",
   "dependencies": {
     "gatsby": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.4.0",
