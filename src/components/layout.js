@@ -1,49 +1,55 @@
-import React from "react"
-import Link from "gatsby-link"
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
+
+import * as React from "react"
 import PropTypes from "prop-types"
-import styles from "./layout.module.css"
-import Container from "../components/container"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Menu = (props) => (
-  <ul style={{ padding: 0, margin: 0 }}>
-    {props.menuItems.map((child, index) => <MenuItem name={child.name} to={child.to} key={"menuItem" + index}
-                                                    active={props.canonicalLink === child.to}/>)}
-  </ul>
-)
+import Header from "./header"
+import "./layout.css"
 
-Menu.propTypes = {
-  canonicalLink: PropTypes.string,
-  menuItems: PropTypes.array.isRequired
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
+      </div>
+    </>
+  )
 }
 
-const MenuItem = (props) => (
-  <li className={[styles.collapse, styles.navigation].join(" ")}>
-    {props.active &&
-    <span>{props.name}</span>
-    }
-    {!props.active &&
-    <Link to={props.to}>{props.name}</Link>
-    }
-  </li>
-)
-
-MenuItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-  active: PropTypes.bool,
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
-const menuItems = [
-  { "name": "Home", "to": "/" },
-  { "name": "Blog", "to": "/blog/" },
-  { "name": "World News", "to": "/world-news/" }
-]
-
-export default props => (
-  <div>
-    <Container style={{ backgroundColor: "white" }}>
-      <Menu canonicalLink={props.canonicalLink} menuItems={menuItems} />
-    </Container>
-    {props.children}
-  </div>
-)
+export default Layout
