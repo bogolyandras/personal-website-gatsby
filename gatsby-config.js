@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `starter`
+        short_name: `starter`,
         start_url: `/`,
         background_color: `#325c80`,
         // This will impact how browsers show your PWA/website
