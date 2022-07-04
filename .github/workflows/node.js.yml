@@ -42,5 +42,5 @@ jobs:
       with:
         name: static-files
         path: ./public/
-    - run: zip -r public.zip public
+    - run: zip -r public.zip public/*
     - run: curl -u${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_USERNAME }}:${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_TOKEN }} -T public.zip "https://bogolyandras.jfrog.io/artifactory/default-generic-local/public.zip"
