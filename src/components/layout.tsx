@@ -7,7 +7,7 @@
 
 import * as React from "react"
 import * as PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import {useStaticQuery, graphql, Link} from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -33,6 +33,12 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+      <p>
+          <Link to="/blog">Blog</Link> <br />
+          <Link to="/page-2/">Go to page 2</Link> <br />
+          <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
+          <Link to="/using-dsg">Go to "Using DSG"</Link>
+      </p>
         <main>{children}</main>
         <footer
           style={{
