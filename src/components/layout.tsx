@@ -1,61 +1,81 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
-import * as PropTypes from "prop-types"
-import {useStaticQuery, graphql, Link} from "gatsby"
+import { Link } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-      <p>
-          <Link to="/blog">Blog</Link> <br />
-          <Link to="/page-2/">Go to page 2</Link> <br />
-          <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-          <Link to="/using-dsg">Go to "Using DSG"</Link>
-      </p>
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+const pageStyles = {
+  color: "#232129",
+  padding: 96,
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+}
+const headingStyles = {
+  marginTop: 0,
+  marginBottom: 64,
+  maxWidth: 320,
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+const doclistStyles = {
+  paddingLeft: 0,
+}
+
+const linkStyle = {
+  color: "#8954A8",
+  fontWeight: "bold",
+  fontSize: 16,
+  verticalAlign: "5%",
+}
+
+const docLinkStyle = {
+  ...linkStyle,
+  listStyleType: "none",
+  display: `inline-block`,
+  marginBottom: 24,
+  marginRight: 12,
+}
+
+const docLinks = [
+  {
+    text: "Home",
+    url: "/",
+    color: "#8954A8",
+  },
+  {
+    text: "Blog",
+    url: "/blog/",
+    color: "#8954A8",
+  },
+  {
+    text: "About",
+    url: "/about/",
+    color: "#8954A8",
+  }
+]
+
+type DataProps = {
+  pageTitle: string,
+  children: React.ReactNode
+}
+
+const Layout = ({ pageTitle, children }: DataProps) => {
+
+  return (
+    <main style={pageStyles}>
+      <ul style={doclistStyles}>
+        {docLinks.map(doc => (
+          <li key={doc.url} style={docLinkStyle}>
+            <Link
+              style={linkStyle}
+              to={`${doc.url}`}
+            >
+              {doc.text}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <h1 style={headingStyles}>{pageTitle}</h1>
+      <div>
+        {children}
+      </div>
+    </main>
+  )
 }
 
 export default Layout
