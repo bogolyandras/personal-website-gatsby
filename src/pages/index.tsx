@@ -77,7 +77,7 @@ const links = [
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Main Page">
+    <Layout path="index">
       <div>
         <p style={paragraphStyles}>
           Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page

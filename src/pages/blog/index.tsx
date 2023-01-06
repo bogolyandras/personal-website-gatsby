@@ -13,7 +13,7 @@ type DataProps = {
 
 const BlogPage = ({data: { allMdx }}: PageProps<DataProps>) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout path="blog">
       {
         allMdx.nodes.map((node: any) => (
           <article key={node.id}>

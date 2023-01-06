@@ -35,42 +35,56 @@ const docLinks = [
   {
     text: "Home",
     url: "/",
-    color: "#8954A8",
+    path: "index"
   },
   {
     text: "Blog",
     url: "/blog/",
-    color: "#8954A8",
+    path: "blog"
+  },
+  {
+    text: "World News",
+    url: "/world-news/",
+    path: "world-news"
   },
   {
     text: "About",
     url: "/about/",
-    color: "#8954A8",
+    path: "about"
   }
 ]
 
 type DataProps = {
-  pageTitle: string,
+  path: string,
   children: React.ReactNode
 }
 
-const Layout = ({ pageTitle, children }: DataProps) => {
+const Layout = ({ path, children }: DataProps) => {
 
   return (
     <main style={pageStyles}>
       <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <Link
-              style={linkStyle}
-              to={`${doc.url}`}
-            >
-              {doc.text}
-            </Link>
-          </li>
-        ))}
+        {docLinks.map(doc => {
+          if (path == doc.path) {
+            return (
+                <li key={doc.url} style={docLinkStyle}>
+                  {doc.text}
+                </li>
+            )
+          } else {
+            return (
+                <li key={doc.url} style={docLinkStyle}>
+                  <Link
+                      style={linkStyle}
+                      to={`${doc.url}`}
+                  >
+                    {doc.text}
+                  </Link>
+                </li>
+            )
+          }
+        })}
       </ul>
-      <h1 style={headingStyles}>{pageTitle}</h1>
       <div>
         {children}
       </div>

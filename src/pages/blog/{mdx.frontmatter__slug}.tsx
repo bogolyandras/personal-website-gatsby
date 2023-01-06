@@ -14,7 +14,7 @@ type DataProps = {
 
 const BlogPost = ({ data, children }: DataProps) => {
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout path="sub-blog" pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
       {children}
     </Layout>
