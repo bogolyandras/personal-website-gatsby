@@ -1,1 +1,109 @@
+body {
+    background: white;
+    margin: 0;
+}
 
+.mainLayout {
+    margin: auto;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+}
+
+* {
+    color: black;
+}
+
+p, a, span, h1, h2, h3, h4, h5, h6 {
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
+}
+
+a {
+    color: #8954A8;
+}
+
+p, a {
+    font-size: 1em;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: rgb(21, 133, 245);
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:hover, a:active {
+    color: rgb(130, 182, 235);
+}
+
+.nav {
+    background-color: #369E8F;
+    display: block;
+    grid-template-columns: minmax(5px, auto) minmax(300px, 1300px) minmax(5px, auto);
+}
+
+.nav span, .nav a {
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+
+.nav span {
+    border-bottom: dotted 3px darkslategray;
+}
+
+.nav a {
+    border-bottom: solid 3px darkslategray;
+    transition: 300ms;
+}
+
+.nav a:link, .nav a:visited, .nav a:hover, .nav a:active {
+    color: rgb(207, 220, 236);
+}
+
+.nav span {
+    color: #f1e8e8;
+}
+
+.nav a:link, .nav a:visited, .nav a:hover, .nav a:active, .nav span {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.nav a:hover {
+    border-bottom-color: darkturquoise;
+}
+
+.nav ul {
+    display: grid;
+    margin: 5px;
+    gap: 1ch;
+    grid-template-columns: repeat(3, minmax(10px, 100%));
+    justify-items: center;
+    padding: 0;
+}
+
+.nav li, .nav li a, .nav li span {
+    display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #101010;
+    }
+
+    * {
+        color: #b8d2b2;
+    }
+
+    a {
+        color: #e82881;
+    }
+
+    .nav {
+        background-color: #073a32;
+    }
+}
