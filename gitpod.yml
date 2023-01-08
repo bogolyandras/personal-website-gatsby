@@ -1,4 +1,8 @@
-# https://www.gitpod.io/docs/config-gitpod-file
+
 tasks:
-  - init: npm install && npm run build
+  - before: |
+      nvm i 18
+      nvm use 18
+      nvm alias default  18
+    init: npm install && npm run build
     command: npm run start
