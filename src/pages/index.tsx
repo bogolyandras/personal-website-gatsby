@@ -6,7 +6,14 @@ import Seo from "../components/seo"
 const IndexPage = () => {
   return (
     <Layout path="index">
-      <p>Welcome to my world!</p>
+      <h1>Welcome to my world!</h1>
+        <p>Here you will find some interesting stuff! Although there are not too many things, you can take a look around.</p>
+        <p>Follow me on</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/bogolyandras/">LinkedIn</a></li>
+            <li><a href="https://github.com/bogolyandras">GitHub</a></li>
+            <li><a href="https://www.credly.com/users/andras-bogoly/">Credly</a></li>
+        </ul>
     </Layout>
   )
 }

@@ -3,6 +3,7 @@ import type { HeadFC } from "gatsby"
 import { Link, graphql, PageProps  } from "gatsby"
 import Layout from '../../components/layout'
 import Seo from "../../components/seo"
+import {Fragment} from "react";
 
 type DataProps = {
   allMdx: {
@@ -16,13 +17,16 @@ const BlogPage = ({data: { allMdx }}: PageProps<DataProps>) => {
     <Layout path="blog">
       {
         allMdx.nodes.map((node: any) => (
-          <article key={node.id}>
-            <Link to={`/blog/${node.frontmatter.slug}`}>
-              {node.frontmatter.title}
-            </Link>
-            <p>Posted: {node.frontmatter.date}</p>
-            <p>{node.excerpt}</p>
-          </article>
+            <Fragment>
+              <article key={node.id}>
+                <Link to={`/blog/${node.frontmatter.slug}`}>
+                  {node.frontmatter.title}
+                </Link>
+                <p>📅{node.frontmatter.date}</p>
+                <p>{node.excerpt}</p>
+              </article>
+              <hr />
+            </Fragment>
         ))
       }
     </Layout>

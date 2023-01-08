@@ -74,7 +74,7 @@ const newsSources : News[][] = [
             name: "Japan",
             websites: [
                 { name: "Nikkei Asian Review", url: "https://asia.nikkei.com/" },
-                { name: "The Asahi Shimbun", url: "http://www.asahi.com/ajw/" },
+                { name: "The Asahi Shimbun", url: "https://www.asahi.com/ajw/" },
                 { name: "The Japan News", url: "https://the-japan-news.com/" },
                 { name: "The Japan Times", url: "https://www.japantimes.co.jp/" }
             ]
@@ -82,9 +82,9 @@ const newsSources : News[][] = [
         {
             name: "South Korea",
             websites: [
-                { name: "The Chosun Ilbo", url: "http://english.chosun.com/" },
+                { name: "The Chosun Ilbo", url: "https://english.chosun.com/" },
                 { name: "Korea Joongang Daily", url: "https://koreajoongangdaily.joins.com/" },
-                { name: "The Hankyoreh", url: "http://english.hani.co.kr/" },
+                { name: "The Hankyoreh", url: "https://english.hani.co.kr/" },
                 { name: "Daily NK", url: "https://www.dailynk.com/english/" }
             ]
         },
@@ -153,19 +153,13 @@ const newsSources : News[][] = [
         {
             name: "China",
             websites: [
+                { name: "South China Morning Post", url: "https://www.scmp.com/" },
                 { name: "CGTN", url: "https://www.cgtn.com/" },
                 { name: "CCTV", url: "https://english.cctv.com/" },
-                { name: "Xinhua", url: "http://www.xinhuanet.com/english/" },
+                { name: "Xinhua", url: "https://english.news.cn/" },
                 { name: "People's Daily", url: "http://en.people.cn/" },
                 { name: "China Daily", url: "https://www.chinadaily.com.cn/" },
                 { name: "Caixin", url: "https://www.caixinglobal.com/" }
-            ]
-        },
-        {
-            name: "Hong Kong",
-            websites: [
-                { name: "South China Morning Post", url: "https://www.scmp.com/" },
-                { name: "Apple Daily", url: "https://hk.appledaily.com/engnews/hotpick/"}
             ]
         },
         {
