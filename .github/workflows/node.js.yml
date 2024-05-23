@@ -17,7 +17,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      node-version: 18.x
+      node-version: 20.x
 
     steps:
     - uses: actions/checkout@v3
@@ -36,14 +36,14 @@ jobs:
         path: ./public/
         retention-days: 1
 
-  upload_to_artifactory:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Download static website files
-      uses: actions/download-artifact@v3
-      with:
-        name: static-files
-        path: ./public/
-    - run: cd public && zip -r ../public.zip * && cd ..
-    - run: curl -u${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_USERNAME }}:${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_TOKEN }} -T public.zip "https://bogolyandras.jfrog.io/artifactory/default-generic-local/personal-website-gatsby/$BRANCH_NAME.zip"
+  # upload_to_artifactory:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - name: Download static website files
+  #     uses: actions/download-artifact@v3
+  #     with:
+  #       name: static-files
+  #       path: ./public/
+  #   - run: cd public && zip -r ../public.zip * && cd ..
+  #   - run: curl -u${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_USERNAME }}:${{ secrets.BOGOLYANDRAS_GENERIC_ARTIFACTORY_TOKEN }} -T public.zip "https://bogolyandras.jfrog.io/artifactory/default-generic-local/personal-website-gatsby/$BRANCH_NAME.zip"
